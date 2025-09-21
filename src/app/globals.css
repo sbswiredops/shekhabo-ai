@@ -268,3 +268,23 @@ html {
     gap: 2rem;
   }
 }
+
+/* Outline primary soft button */
+.btn-outline-primary {
+  border: 1px solid var(--color-text-primary);
+  color: var(--color-text-primary);
+  background-color: rgba(80, 53, 110, 0.05);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.btn-outline-primary:hover {
+  background-color: var(--color-text-primary);
+  color: #fff;
+  border-color: var(--color-text-primary);
+}
+
+/* Carousel nav offsets */
+.nav-arrow-left { margin-left: -20px; }
+.nav-arrow-right { margin-right: -20px; }
+
+/* Scroll snap helper */
+.snap-x-mandatory { scroll-snap-type: x mandatory; }

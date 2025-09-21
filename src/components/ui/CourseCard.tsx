@@ -90,26 +90,7 @@ export default function CourseCard({ course }: { course: Course }) {
               <Button
                 variant="outline"
                 size="lg"
-                className="btn-hover w-full sm:w-auto rounded-lg px-4 py-2 font-medium"
-                style={{
-                  borderColor: "var(--color-text-primary)",
-                  color: "var(--color-text-primary)",
-                  backgroundColor: "rgba(80, 53, 110, 0.05)",
-                  transition: "background 0.2s, color 0.2s",
-                  minWidth: "0",
-                  maxWidth: "100%",
-                  height: "40px",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor =
-                    "var(--color-text-primary)";
-                  e.currentTarget.style.color = "#fff";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor =
-                    "rgba(80, 53, 110, 0.05)";
-                  e.currentTarget.style.color = "var(--color-text-primary)";
-                }}
+                className="btn-outline-primary btn-animate w-full sm:w-auto rounded-lg px-4 py-2 font-medium h-10"
               >
                 Details
               </Button>
@@ -117,8 +98,7 @@ export default function CourseCard({ course }: { course: Course }) {
             <Link href={`/courses/${course.id}/enroll`}>
               <Button
                 size="sm"
-                className="bg-[#4B256D] text-white rounded-lg px-4 py-2 font-medium hover:bg-[#3a1e56] transition"
-                style={{ height: "40px" }}
+                className="bg-[#4B256D] text-white rounded-lg px-4 py-2 font-medium hover:bg-[#3a1e56] transition h-10"
               >
                 {t("featuredCourses.enroll") || "Enroll Now"}
               </Button>

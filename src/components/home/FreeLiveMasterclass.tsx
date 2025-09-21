@@ -169,8 +169,7 @@ export default function FreeLiveMasterclass() {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-lg p-3 hover:bg-gray-50 transition-colors duration-200 hidden md:flex items-center justify-center"
-            style={{ marginLeft: "-20px" }}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-lg p-3 hover:bg-gray-50 transition-colors duration-200 hidden md:flex items-center justify-center nav-arrow-left"
           >
             <svg
               className="w-6 h-6 text-gray-600"
@@ -189,8 +188,7 @@ export default function FreeLiveMasterclass() {
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-lg p-3 hover:bg-gray-50 transition-colors duration-200 hidden md:flex items-center justify-center"
-            style={{ marginRight: "-20px" }}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-lg p-3 hover:bg-gray-50 transition-colors duration-200 hidden md:flex items-center justify-center nav-arrow-right"
           >
             <svg
               className="w-6 h-6 text-gray-600"
@@ -211,10 +209,9 @@ export default function FreeLiveMasterclass() {
           <div className="overflow-x-auto overflow-y-visible scrollbar-hide pl-6 pr-4 sm:pl-8 sm:pr-8 -my-4 py-4">
             <div
               ref={sliderRef}
-              className="flex gap-0 sm:gap-6 lg:gap-8 overflow-visible slider-container"
+              className="flex gap-0 sm:gap-6 lg:gap-8 overflow-visible slider-container snap-x-mandatory"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              style={{ scrollSnapType: "x mandatory" }}
             >
               {filteredMasterclasses.map((masterclass, idx) => (
                 <div
@@ -253,23 +250,7 @@ export default function FreeLiveMasterclass() {
             <Button
               variant="outline"
               size="lg"
-              className="btn-hover"
-              style={{
-                borderColor: "var(--color-text-primary)",
-                color: "var(--color-text-primary)",
-                backgroundColor: "rgba(80, 53, 110, 0.05)",
-                transition: "background 0.2s, color 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor =
-                  "var(--color-text-primary)";
-                e.currentTarget.style.color = "#fff";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor =
-                  "rgba(80, 53, 110, 0.05)";
-                e.currentTarget.style.color = "var(--color-text-primary)";
-              }}
+              className="btn-outline-primary btn-animate"
             >
               View All Masterclasses
               <svg
